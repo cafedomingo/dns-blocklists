@@ -1,0 +1,27 @@
+## Privacy ##
+# HaGeZi - Normal
+#https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/multi.txt
+# HaGeZi - Pro
+#https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/pro.txt
+# HaGeZi - Pro++
+https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/pro.plus.txt
+
+## Threat protection ##
+# HaGeZi - Threat Intelligence Feeds
+https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/tif.txt
+# HaGeZi - Dynamic DNS
+https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/dyndns.txt
+# HaGeZi - Badware Hoster
+https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/hoster.txt
+# HaGeZi - Most Abused TLDs
+https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/spam-tlds-adblock.txt
+# HaGeZi - Newly Registered Domains
+https://raw.githubusercontent.com/xRuffKez/NRD/main/nrd-14day_adblock.txt
+# OISD - Big
+#https://big.oisd.nl
+
+## Native ##
+# HaGeZi - Apple
+https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/native.apple.txt
+# HaGeZi - LG WebOS
+https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/native.lgwebos.txt
