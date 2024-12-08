@@ -15,7 +15,7 @@ https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/dyndns.txt
 https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/hoster.txt
 # HaGeZi - Most Abused TLDs
 https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/spam-tlds-adblock.txt
-# HaGeZi - Newly Registered Domains
+# xRuffKez - Newly Registered Domains (14 day)
 https://raw.githubusercontent.com/xRuffKez/NRD/main/lists/14-day/adblock/nrd-14day_adblock.txt
 # OISD - Big
 #https://big.oisd.nl
