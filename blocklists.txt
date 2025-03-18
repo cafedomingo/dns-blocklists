@@ -32,6 +32,6 @@ https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/native.amaz
 # HaGeZi - LG WebOS
 https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.lgwebos.txt
 # HaGeZi - Samsung
-https://raw.githubusercontent.com/hagezi/dns-blocklists@latest/adblock/native.samsung.txt
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.samsung.txt
 # HaGeZi - TikTok (Fingerprinting)
 https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/native.tiktok.txt
