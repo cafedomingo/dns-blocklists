@@ -5,21 +5,20 @@ appleid.cdn-apple.com
 idmsa.apple.com
 gsa.apple.com
 # iCloud
-*.apple-cloudkit.com
-*.apple-livephotoskit.com
-*.apzones.com
-*.cdn-apple.com
-*.gc.apple.com
-*.icloud.com
-*.icloud.com.cn
-*.icloud.apple.com
-*.icloud-content.com
-*.iwork.apple.com
+apple-cloudkit.com
+apple-livephotoskit.com
+apzones.com
+cdn-apple.com
+gc.apple.com
+icloud.com
+icloud.apple.com
+icloud-content.com
+iwork.apple.com
 mask.icloud.com
 mask-h2.icloud.com
 mask-api.icloud.com
 # Apple Intelligence, Siri, and Search
-*.smoot.apple.com
+smoot.apple.com
 apple-relay.apple.com
 apple-relay.cloudflare.com
 apple-relay.fastly-edge.com
