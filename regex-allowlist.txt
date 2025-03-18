@@ -1,0 +1,6 @@
+## Hulu ##
+# Ads
+^ads-\w+-darwin\.hulustream\.com$
+
+## Email trackers ##
+^email\..*veracross\.com$
