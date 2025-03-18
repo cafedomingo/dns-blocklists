@@ -1,10 +1,10 @@
-# Apple - https://support.apple.com/en-us/101555
-## Apple Account
+## Apple - https://support.apple.com/en-us/101555 ##
+# Apple Account
 account.apple.com
 appleid.cdn-apple.com
 idmsa.apple.com
 gsa.apple.com
-## iCloud
+# iCloud
 *.apple-cloudkit.com
 *.apple-livephotoskit.com
 *.apzones.com
@@ -18,10 +18,15 @@ gsa.apple.com
 mask.icloud.com
 mask-h2.icloud.com
 mask-api.icloud.com
-## Apple Intelligence, Siri, and Search
+# Apple Intelligence, Siri, and Search
 *.smoot.apple.com
 apple-relay.apple.com
 apple-relay.cloudflare.com
 apple-relay.fastly-edge.com
 cp4.cloudflare.com
 guzzoni.apple.com
+
+## Email trackers ##
+a.klaviyo.com
+static.klaviyo.com
+trk.klclick.com
