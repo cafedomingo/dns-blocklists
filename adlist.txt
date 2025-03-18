@@ -1,20 +1,20 @@
 ## Privacy ##
 # HaGeZi - Normal
-#https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/multi.txt
+#https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/multi.txt
 # HaGeZi - Pro
-https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/pro.txt
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt
 # HaGeZi - Pro++
-#https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/pro.plus.txt
+#https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.plus.txt
 
 ## Threat protection ##
 # HaGeZi - Threat Intelligence Feeds
-https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/tif.txt
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/tif.txt
 # HaGeZi - Dynamic DNS
-https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/dyndns.txt
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/dyndns.txt
 # HaGeZi - Badware Hoster
-https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/hoster.txt
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/hoster.txt
 # HaGeZi - Most Abused TLDs
-https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/spam-tlds-adblock.txt
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/spam-tlds-adblock.txt
 # xRuffKez - Newly Registered Domains (14 day)
 https://raw.githubusercontent.com/xRuffKez/NRD/main/lists/14-day/adblock/nrd-14day_adblock.txt
 # OISD - Big
@@ -22,6 +22,14 @@ https://raw.githubusercontent.com/xRuffKez/NRD/main/lists/14-day/adblock/nrd-14d
 
 ## Native ##
 # HaGeZi - Apple
-https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/native.apple.txt
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.apple.txt
+# HaGeZi - Microsoft (Windows, Office, MSN)
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/native.winoffice.txt
+# HaGeZi - Amazon (Devices, Shopping, Video)
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/native.amazon.txt
 # HaGeZi - LG WebOS
-https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/native.lgwebos.txt
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.lgwebos.txt
+# HaGeZi - Samsung
+https://raw.githubusercontent.com/hagezi/dns-blocklists@latest/adblock/native.samsung.txt
+# HaGeZi - TikTok (Fingerprinting)
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/native.tiktok.txt
