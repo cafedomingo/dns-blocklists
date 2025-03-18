@@ -1,3 +1,3 @@
 ## Threat protection ##
 # HaGeZi - Most Abused TLDs (allow list)
-https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/spam-tlds-adblock-allow.txt
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/spam-tlds-adblock-allow.txt
