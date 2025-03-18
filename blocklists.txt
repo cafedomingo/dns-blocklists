@@ -17,8 +17,10 @@ https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/hoster.txt
 https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/spam-tlds-adblock.txt
 # xRuffKez - Newly Registered Domains (14 day)
 https://raw.githubusercontent.com/xRuffKez/NRD/main/lists/14-day/adblock/nrd-14day_adblock.txt
-# OISD - Big
-#https://big.oisd.nl
+# HaGeZi - Gambling
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/gambling.txt
+# OISD - NSFW
+https://nsfw.oisd.nl/
 
 ## Native ##
 # HaGeZi - Apple
