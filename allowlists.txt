@@ -1,3 +1,7 @@
+## Referral links ##
+# HaGeZi - Allowlist Referral
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/whitelist-referral-native.txt
+
 ## Threat protection ##
 # HaGeZi - Most Abused TLDs (allow list)
 https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/spam-tlds-adblock-allow.txt
