@@ -24,8 +24,3 @@ apple-relay.cloudflare.com
 apple-relay.fastly-edge.com
 cp4.cloudflare.com
 guzzoni.apple.com
-
-## Email trackers ##
-a.klaviyo.com
-static.klaviyo.com
-trk.klclick.com
