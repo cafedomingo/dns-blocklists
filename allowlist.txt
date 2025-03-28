@@ -24,3 +24,6 @@ apple-relay.cloudflare.com
 apple-relay.fastly-edge.com
 cp4.cloudflare.com
 guzzoni.apple.com
+
+## Opal Camera
+opalcamera.sfo3.digitaloceanspaces.com
