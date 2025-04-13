@@ -1,3 +1,5 @@
-## Referral links ##
+# GoodnessJSON - Allowlist
+https://raw.githubusercontent.com/GoodnessJSON/PiHole-Whitelist/master/lists/whitelist.txt
+
 # HaGeZi - Allowlist Referral
 https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/whitelist-referral-native.txt

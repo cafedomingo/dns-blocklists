@@ -1,4 +1,4 @@
-## Apple - https://support.apple.com/en-us/101555 ##
+## Apple - https://support.apple.com/en-us/101555
 # Apple Account
 account.apple.com
 appleid.cdn-apple.com
@@ -25,5 +25,22 @@ apple-relay.fastly-edge.com
 cp4.cloudflare.com
 guzzoni.apple.com
 
-## Opal Camera ##
+## URL shorteners
+t.ly
+adf.ly
+www.adf.ly
+bit.ly
+www.bit.ly
+goo.gl
+ow.ly
+www.ow.ly
+amzn.to
+amzn.com
+
+## Opal Camera
 opalcamera.sfo3.digitaloceanspaces.com
+
+## Domain Lists
+oisd.nl
+raw.githubusercontent.com
+
