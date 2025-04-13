@@ -34,8 +34,8 @@ https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/tif.txt
 # HaGeZi - TikTok (Fingerprinting)
 https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/native.tiktok.txt
 
-# OISD - NSFW
-https://nsfw.oisd.nl/
+# HaGeZi - NSFW DNS Blocklist
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/nsfw.txt
 
 # xRuffKez - Newly Registered Domains (14 day)
 https://raw.githubusercontent.com/xRuffKez/NRD/main/lists/14-day/adblock/nrd-14day_adblock.txt
