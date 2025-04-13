@@ -1,37 +1,41 @@
-## Privacy ##
-# HaGeZi - Normal
-#https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/multi.txt
 # HaGeZi - Pro
 https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt
-# HaGeZi - Pro++
-#https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.plus.txt
 
-## Threat protection ##
-# HaGeZi - Threat Intelligence Feeds
-https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/tif.txt
-# HaGeZi - Dynamic DNS
-https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/dyndns.txt
+# HaGeZi - Amazon (Devices, Shopping, Video)
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/native.amazon.txt
+
+# HaGeZi - Apple
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.apple.txt
+
 # HaGeZi - Badware Hoster
 https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/hoster.txt
-# HaGeZi - Most Abused TLDs
-https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/spam-tlds-adblock.txt
-# xRuffKez - Newly Registered Domains (14 day)
-https://raw.githubusercontent.com/xRuffKez/NRD/main/lists/14-day/adblock/nrd-14day_adblock.txt
+
+# HaGeZi - Dynamic DNS
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/dyndns.txt
+
 # HaGeZi - Gambling
 https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/gambling.txt
+
+# HaGeZi - LG WebOS
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.lgwebos.txt
+
+# HaGeZi - Microsoft (Windows, Office, MSN)
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/native.winoffice.txt
+
+# HaGeZi - Most Abused TLDs
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/spam-tlds-adblock.txt
+
+# HaGeZi - Samsung
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.samsung.txt
+
+# HaGeZi - Threat Intelligence Feeds
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/tif.txt
+
+# HaGeZi - TikTok (Fingerprinting)
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/native.tiktok.txt
+
 # OISD - NSFW
 https://nsfw.oisd.nl/
 
-## Native ##
-# HaGeZi - Apple
-https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.apple.txt
-# HaGeZi - Microsoft (Windows, Office, MSN)
-https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/native.winoffice.txt
-# HaGeZi - Amazon (Devices, Shopping, Video)
-https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/native.amazon.txt
-# HaGeZi - LG WebOS
-https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.lgwebos.txt
-# HaGeZi - Samsung
-https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.samsung.txt
-# HaGeZi - TikTok (Fingerprinting)
-https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/native.tiktok.txt
+# xRuffKez - Newly Registered Domains (14 day)
+https://raw.githubusercontent.com/xRuffKez/NRD/main/lists/14-day/adblock/nrd-14day_adblock.txt
