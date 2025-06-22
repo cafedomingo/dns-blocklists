@@ -7,9 +7,6 @@ https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/native.amaz
 # HaGeZi - Apple
 https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.apple.txt
 
-# HaGeZi - Badware Hoster
-https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/hoster.txt
-
 # HaGeZi - Dynamic DNS
 https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/dyndns.txt
 
