@@ -5,49 +5,28 @@ A curated collection of DNS blocklists and allowlists for Pi-hole, designed to w
 ## Overview
 
 This repository contains:
-- **Blocklists**: Comprehensive DNS blocklists targeting ads, malware, tracking, and unwanted content
+- **Blocklists**: DNS blocklists targeting ads, malware, tracking, and unwanted content
 - **Allowlists**: Carefully curated domains that should never be blocked
 - **Regex patterns**: Advanced filtering rules for specific use cases
-
-## Blocklists Included
-
-### Primary Protection
-- **HaGeZi Pro**: High-quality, comprehensive ad and tracker blocking
-- **HaGeZi Threat Intelligence Feeds**: Malware and security threat protection
-- **HaGeZi Most Abused TLDs**: Blocks spam-prone top-level domains
-- **xRuffKez NRD**: Newly registered domains (14-day protection)
-
-### Platform-Specific Blocking
-- **Apple**: iOS/macOS telemetry and unwanted services
-- **Amazon**: Device telemetry, shopping trackers, video ads
-- **Microsoft**: Windows/Office telemetry and tracking
-- **Samsung**: Smart TV and device telemetry
-- **LG WebOS**: Smart TV ads and tracking
-- **TikTok**: Fingerprinting and tracking protection
-
-### Content Filtering
-- **NSFW**: Adult content blocking
-- **Gambling**: Gambling site protection
-- **Dynamic DNS**: Blocks suspicious dynamic DNS services
-
-## Allowlists
-
-- **GoodnessJSON Community Allowlist**: Common false positives and essential services
-- **HaGeZi Referral Allowlist**: Legitimate referral and affiliate links
-- **Custom Allowlist**: Apple services, URL shorteners, and other essential domains
 
 ## Usage with pihole-updatelists
 
 1. Install [pihole-updatelists](https://github.com/jacklul/pihole-updatelists)
-2. Clone this repository or download the list files
-3. Configure pihole-updatelists to use these files:
+2. Clone this repository to your Pi-hole server
+3. Create or update your `pihole-updatelists.conf` file:
 
 ```bash
-# Example configuration
-pihole-updatelists --adlists-url "file:///path/to/blocklists.txt" \
-                   --whitelist-url "file:///path/to/allowlists.txt" \
-                   --whitelist-exact-url "file:///path/to/allowlist.txt" \
-                   --regex-whitelist-url "file:///path/to/regex-allowlist.txt"
+# /etc/pihole-updatelists.conf
+
+ADLISTS_URL="file:///path/to/dns-blocklists/blocklists.txt"
+WHITELIST_URL="file:///path/to/dns-blocklists/allowlists.txt"
+WHITELIST_EXACT_URL="file:///path/to/dns-blocklists/allowlist.txt"
+REGEX_WHITELIST_URL="file:///path/to/dns-blocklists/regex-allowlist.txt"
+```
+
+4. Run pihole-updatelists to apply the configuration:
+```bash
+pihole-updatelists
 ```
 
 ## File Structure
