@@ -12,22 +12,21 @@ This repository contains:
 ## Usage with pihole-updatelists
 
 1. Install [pihole-updatelists](https://github.com/jacklul/pihole-updatelists)
-2. Clone this repository to your Pi-hole server
-3. Create or update your `pihole-updatelists.conf` file:
+2. Create or update your `pihole-updatelists.conf` file:
 
 ```bash
 # /etc/pihole-updatelists.conf
 # See: https://github.com/jacklul/pihole-updatelists#configuration
 
-ALLOWLISTS_URL="file:///path/to/dns-blocklists/allowlists.txt"
-BLACKLIST_URL="file:///path/to/dns-blocklists/blocklist.txt"
-BLOCKLISTS_URL="file:///path/to/dns-blocklists/blocklists.txt"
-REGEX_BLACKLIST_URL="file:///path/to/dns-blocklists/regex-blocklist.txt"
-REGEX_WHITELIST_URL="file:///path/to/dns-blocklists/regex-allowlist.txt"
-WHITELIST_URL="file:///path/to/dns-blocklists/allowlist.txt"
+ALLOWLISTS_URL="https://raw.githubusercontent.com/patricksunday/dns-blocklists/main/allowlists.txt"
+BLACKLIST_URL="https://raw.githubusercontent.com/patricksunday/dns-blocklists/main/blocklist.txt"
+BLOCKLISTS_URL="https://raw.githubusercontent.com/patricksunday/dns-blocklists/main/blocklists.txt"
+REGEX_BLACKLIST_URL="https://raw.githubusercontent.com/patricksunday/dns-blocklists/main/regex-blocklist.txt"
+REGEX_WHITELIST_URL="https://raw.githubusercontent.com/patricksunday/dns-blocklists/main/regex-allowlist.txt"
+WHITELIST_URL="https://raw.githubusercontent.com/patricksunday/dns-blocklists/main/allowlist.txt"
 ```
 
-4. Run pihole-updatelists to apply the configuration:
+3. Run pihole-updatelists to apply the configuration:
 ```bash
 pihole-updatelists
 ```
