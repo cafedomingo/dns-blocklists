@@ -18,12 +18,12 @@ This repository contains:
 # /etc/pihole-updatelists.conf
 # See: https://github.com/jacklul/pihole-updatelists#configuration
 
-ALLOWLISTS_URL="https://raw.githubusercontent.com/patricksunday/dns-blocklists/main/allowlists.txt"
-BLACKLIST_URL="https://raw.githubusercontent.com/patricksunday/dns-blocklists/main/blocklist.txt"
-BLOCKLISTS_URL="https://raw.githubusercontent.com/patricksunday/dns-blocklists/main/blocklists.txt"
-REGEX_BLACKLIST_URL="https://raw.githubusercontent.com/patricksunday/dns-blocklists/main/regex-blocklist.txt"
-REGEX_WHITELIST_URL="https://raw.githubusercontent.com/patricksunday/dns-blocklists/main/regex-allowlist.txt"
-WHITELIST_URL="https://raw.githubusercontent.com/patricksunday/dns-blocklists/main/allowlist.txt"
+ALLOWLISTS_URL="https://raw.githubusercontent.com/cafedomingo/dns-blocklists/main/allowlists.txt"
+BLACKLIST_URL="https://raw.githubusercontent.com/cafedomingo/dns-blocklists/main/blocklist.txt"
+BLOCKLISTS_URL="https://raw.githubusercontent.com/cafedomingo/dns-blocklists/main/blocklists.txt"
+REGEX_BLACKLIST_URL="https://raw.githubusercontent.com/cafedomingo/dns-blocklists/main/regex-blocklist.txt"
+REGEX_WHITELIST_URL="https://raw.githubusercontent.com/cafedomingo/dns-blocklists/main/regex-allowlist.txt"
+WHITELIST_URL="https://raw.githubusercontent.com/cafedomingo/dns-blocklists/main/allowlist.txt"
 ```
 
 3. Run pihole-updatelists to apply the configuration:
