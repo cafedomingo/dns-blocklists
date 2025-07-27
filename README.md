@@ -22,24 +22,8 @@ This repository contains:
 ALLOWLISTS_URL="file:///path/to/dns-blocklists/allowlists.txt"
 BLACKLIST_URL="file:///path/to/dns-blocklists/blocklist.txt"
 BLOCKLISTS_URL="file:///path/to/dns-blocklists/blocklists.txt"
-COMMENT="Managed by pihole-updatelists"
-DEBUG=false
-DOWNLOAD_TIMEOUT=60
-GIT_BRANCH="master"
-GRAVITY_DB="/etc/pihole/gravity.db"
-GROUP_EXCLUSIVE=false
-GROUP_ID=0
-IGNORE_DOWNLOAD_FAILURE=false
-LOCK_FILE="/var/lock/pihole-updatelists.lock"
-LOG_FILE=""
-MIGRATION_MODE=1
-PERSISTENT_GROUP=true
-PIHOLE_CMD="/usr/local/bin/pihole"
 REGEX_BLACKLIST_URL="file:///path/to/dns-blocklists/regex-blocklist.txt"
 REGEX_WHITELIST_URL="file:///path/to/dns-blocklists/regex-allowlist.txt"
-REQUIRE_COMMENT=true
-UPDATE_GRAVITY=true
-VERBOSE=false
 WHITELIST_URL="file:///path/to/dns-blocklists/allowlist.txt"
 ```
 
