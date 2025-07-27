@@ -30,20 +30,3 @@ WHITELIST_URL="https://raw.githubusercontent.com/cafedomingo/dns-blocklists/main
 ```bash
 pihole-updatelists
 ```
-
-## File Structure
-
-- `blocklists.txt` - URLs of remote blocklists for pihole-updatelists
-- `allowlists.txt` - URLs of remote allowlists for pihole-updatelists  
-- `allowlist.txt` - Individual domains to always allow
-- `regex-allowlist.txt` - Regex patterns for advanced allowlist rules
-- `blocklist.txt` - Individual domains to block (currently empty)
-- `regex-blocklist.txt` - Regex patterns for blocking (currently empty)
-
-## Maintenance
-
-Lists are automatically updated by pihole-updatelists when configured. Manual updates can be triggered as needed.
-
-## License
-
-MIT License - see [LICENSE](LICENSE) file for details.
