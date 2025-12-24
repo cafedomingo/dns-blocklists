@@ -34,5 +34,6 @@ https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/native.tikt
 # HaGeZi - NSFW DNS Blocklist
 https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/nsfw.txt
 
-# xRuffKez/DNSBunker - Newly Registered Domains (14 day)
-https://raw.githubusercontent.com/DNSBunker/NRD/main/lists/14-day/adblock/nrd-14day
+# HaGeZi - Newly Registered Domains (14 day)
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/nrd14-8.txt
+
