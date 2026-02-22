@@ -27,8 +27,6 @@ guzzoni.apple.com
 
 ## url shorteners
 t.ly
-adf.ly
-www.adf.ly
 bit.ly
 www.bit.ly
 goo.gl
