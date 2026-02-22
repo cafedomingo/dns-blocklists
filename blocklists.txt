@@ -2,7 +2,7 @@
 https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt
 
 # HaGeZi - Amazon (Devices, Shopping, Video)
-https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/native.amazon.txt
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.amazon.txt
 
 # HaGeZi - Apple
 https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.apple.txt
@@ -17,7 +17,7 @@ https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/gambling.tx
 https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.lgwebos.txt
 
 # HaGeZi - Microsoft (Windows, Office, MSN)
-https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/native.winoffice.txt
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.winoffice.txt
 
 # HaGeZi - Most Abused TLDs
 https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/spam-tlds-adblock.txt
@@ -29,11 +29,11 @@ https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.sams
 https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/tif.txt
 
 # HaGeZi - TikTok (Fingerprinting)
-https://raw.githubusercontent.com/hagezi/dns-blocklists/main/domains/native.tiktok.txt
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.tiktok.txt
 
 # HaGeZi - NSFW DNS Blocklist
 https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/nsfw.txt
 
-# HaGeZi - Newly Registered Domains (14 day)
-https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/nrd14-8.txt
+# HaGeZi - Newly Registered Domains (7 day)
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/nrd7.txt
 

@@ -36,7 +36,6 @@ amzn.to
 amzn.com
 
 ## domain lists
-oisd.nl
 raw.githubusercontent.com
 
 opalcamera.sfo3.digitaloceanspaces.com
