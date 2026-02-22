@@ -29,7 +29,6 @@ guzzoni.apple.com
 t.ly
 bit.ly
 www.bit.ly
-goo.gl
 ow.ly
 www.ow.ly
 amzn.to
