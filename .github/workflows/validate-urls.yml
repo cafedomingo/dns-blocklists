@@ -11,8 +11,8 @@ on:
       - "blocklists.txt"
       - "allowlists.txt"
   schedule:
-    # Weekly on Monday at 8am UTC
-    - cron: "0 8 * * 1"
+    # Weekly on Monday at 8am Pacific (4pm UTC)
+    - cron: "0 16 * * 1"
 
 jobs:
   validate-urls:
