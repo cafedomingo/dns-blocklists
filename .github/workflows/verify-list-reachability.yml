@@ -1,4 +1,4 @@
-name: Validate blocklist URLs
+name: Verify allowlist & blocklist reachability
 
 on:
   push:
@@ -15,21 +15,22 @@ on:
     - cron: "0 16 * * 1"
 
 jobs:
-  validate-urls:
+  verify-list-urls:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Validate URLs
+      - name: Verify allowlist & blocklist URLs
         run: |
+          set -euo pipefail
           failed=0
           for file in blocklists.txt allowlists.txt; do
             echo "Checking $file"
-            while IFS= read -r line; do
+            while IFS= read -r line || [ -n "$line" ]; do
               # Skip comments and blank lines
               [[ -z "$line" || "$line" == \#* ]] && continue
 
-              if curl --silent --head --fail --location --max-time 30 "$line" > /dev/null 2>&1; then
+              if curl --silent --head --fail --location --connect-timeout 10 --max-time 30 "$line" > /dev/null 2>&1; then
                 echo "  ✓ $line"
               else
                 echo "  ✗ $line"
