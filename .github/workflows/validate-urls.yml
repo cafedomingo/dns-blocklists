@@ -9,6 +9,7 @@ on:
     paths:
       - "blocklists.txt"
       - "allowlists.txt"
+  workflow_dispatch:
   schedule:
     # Weekly on Monday at 8am UTC
     - cron: "0 8 * * 1"
