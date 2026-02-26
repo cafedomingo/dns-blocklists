@@ -30,7 +30,7 @@ jobs:
               # Skip comments and blank lines
               [[ -z "$line" || "$line" == \#* ]] && continue
 
-              if curl --silent --fail --location --connect-timeout 10 --max-time 30 "$line" > /dev/null 2>&1; then
+              if curl --silent --head --fail --location --connect-timeout 10 --max-time 30 "$line" > /dev/null 2>&1; then
                 echo "  ✓ $line"
               else
                 echo "  ✗ $line"
