@@ -1,0 +1,43 @@
+name: Validate blocklist URLs
+
+on:
+  push:
+    paths:
+      - "blocklists.txt"
+      - "allowlists.txt"
+  pull_request:
+    paths:
+      - "blocklists.txt"
+      - "allowlists.txt"
+  schedule:
+    # Weekly on Monday at 8am UTC
+    - cron: "0 8 * * 1"
+
+jobs:
+  validate-urls:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate URLs
+        run: |
+          failed=0
+          for file in blocklists.txt allowlists.txt; do
+            echo "Checking $file"
+            while IFS= read -r line; do
+              # Skip comments and blank lines
+              [[ -z "$line" || "$line" == \#* ]] && continue
+
+              if curl --silent --head --fail --location --max-time 30 "$line" > /dev/null 2>&1; then
+                echo "  ✓ $line"
+              else
+                echo "  ✗ $line"
+                failed=1
+              fi
+            done < "$file"
+          done
+          if [ "$failed" -eq 1 ]; then
+            echo ""
+            echo "One or more URLs failed to load."
+            exit 1
+          fi
