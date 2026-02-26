@@ -3,3 +3,6 @@ https://raw.githubusercontent.com/GoodnessJSON/PiHole-Whitelist/master/lists/whi
 
 # HaGeZi - Allowlist Referral
 https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/whitelist-referral-native.txt
+
+# TEST - Bad URL (remove after testing)
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/also-does-not-exist.txt
