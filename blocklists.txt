@@ -37,4 +37,3 @@ https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/nsfw.txt
 # HaGeZi - Newly Registered Domains (7 day)
 https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/nrd7.txt
 
-
