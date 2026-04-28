@@ -17,6 +17,9 @@ on:
 jobs:
   verify-list-urls:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: write
     steps:
       - uses: actions/checkout@v4
 
@@ -43,3 +46,13 @@ jobs:
             echo "One or more URLs failed to load."
             exit 1
           fi
+
+      # Reset GitHub's 60-day scheduled-workflow inactivity timer without
+      # creating dummy commits. Runs only on the cron path so PRs/pushes skip it.
+      - name: Keep workflow active
+        if: github.event_name == 'schedule'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api --method PUT \
+            "/repos/${{ github.repository }}/actions/workflows/verify-list-reachability.yml/enable"
