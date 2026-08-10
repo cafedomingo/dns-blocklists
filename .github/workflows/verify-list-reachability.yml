@@ -49,8 +49,10 @@ jobs:
 
       # Reset GitHub's 60-day scheduled-workflow inactivity timer without
       # creating dummy commits. Runs only on the cron path so PRs/pushes skip it.
+      # always() is required so a sustained upstream outage — exactly when this
+      # workflow matters most — can't let the timer lapse and disable the cron.
       - name: Keep workflow active
-        if: github.event_name == 'schedule'
+        if: always() && github.event_name == 'schedule'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
