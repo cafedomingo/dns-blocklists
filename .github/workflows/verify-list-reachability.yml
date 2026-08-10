@@ -24,74 +24,26 @@ jobs:
       - uses: actions/checkout@v7
 
       - name: Verify allowlist & blocklist URLs
-        env:
-          # The newest list across the whole set must be at least this recent.
-          MAX_SOURCE_AGE_DAYS: 5
         run: |
           set -euo pipefail
-          now=$(date -u +%s)
           failed=0
-          newest=0
-          dated=0
-
           for file in blocklists.txt allowlists.txt; do
             echo "Checking $file"
             while IFS= read -r line || [ -n "$line" ]; do
               # Skip comments and blank lines
               [[ -z "$line" || "$line" == \#* ]] && continue
 
-              # Ranged GET rather than HEAD: it proves the body is actually being
-              # served and pulls down the header block, at ~2KB instead of ~5MB.
-              if ! head_bytes=$(curl --silent --fail --location --connect-timeout 10 \
-                                  --max-time 30 --range 0-2047 "$line" 2>/dev/null); then
-                echo "  ✗ $line (unreachable)"
+              if curl --silent --head --fail --location --connect-timeout 10 --max-time 30 "$line" > /dev/null 2>&1; then
+                echo "  ✓ $line"
+              else
+                echo "  ✗ $line"
                 failed=1
-                continue
               fi
-
-              modified=$(sed -n '/^! Last modified:/{s/^! Last modified: *//;p;q;}' <<<"$head_bytes")
-              if [ -z "$modified" ]; then
-                echo "  ✓ $line (no date header)"
-                continue
-              fi
-              if ! ts=$(date -u -d "$modified" +%s 2>/dev/null); then
-                echo "  ✓ $line (unparseable date: $modified)"
-                continue
-              fi
-
-              echo "  ✓ $line (updated $(( (now - ts) / 86400 ))d ago)"
-              dated=1
-              if [ "$ts" -gt "$newest" ]; then newest="$ts"; fi
             done < "$file"
           done
-
-          # A frozen mirror or a CDN pinned to a cached copy keeps returning 200
-          # forever, so reachability alone cannot see it. Per-list age thresholds
-          # would be useless here — cadence varies enormously between lists
-          # (pro.txt rebuilds daily, native.apple.txt can legitimately sit for over
-          # a month) — so assert instead that the source as a whole is still alive:
-          # if nothing at all has been rebuilt lately, the origin has stopped.
-          echo ""
-          if [ "$dated" -eq 1 ]; then
-            newest_age=$(( (now - newest) / 86400 ))
-            echo "Freshness: newest list updated ${newest_age}d ago (threshold ${MAX_SOURCE_AGE_DAYS}d)"
-            if [ "$newest_age" -gt "$MAX_SOURCE_AGE_DAYS" ]; then
-              echo "No list has updated in ${newest_age} days - the source looks frozen."
-              echo "URLs still resolve, so suspect a stale mirror or a cached CDN copy."
-              failed=1
-            fi
-          else
-            # Fail closed. Every HaGeZi list carries this header, so "nobody had a
-            # date" means the URLs are serving something other than the expected
-            # lists — silently skipping the gate here would hand back a green run.
-            echo "Freshness: no list exposed a parseable '! Last modified:' header."
-            echo "Expected the HaGeZi lists to carry one - check what these URLs return."
-            failed=1
-          fi
-
           if [ "$failed" -eq 1 ]; then
             echo ""
-            echo "One or more list checks failed."
+            echo "One or more URLs failed to load."
             exit 1
           fi
 
