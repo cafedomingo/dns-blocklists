@@ -1,0 +1,24 @@
+name: Validate lists
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+
+      # Regexes are compiled by the same FTL that runs on the Pi-holes.
+      # :latest tracks what the Pi-holes run after updating.
+      - name: Pull Pi-hole image
+        run: docker pull --quiet pihole/pihole:latest
+
+      - name: Validate list files
+        run: >
+          python3 scripts/validate_lists.py
+          --ftl "docker run --rm --entrypoint pihole-FTL pihole/pihole:latest"
