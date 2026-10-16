@@ -50,38 +50,51 @@ LISTS = [
 ]
 
 
-def validate(name, check, errors):
+RESULTS = []
+
+
+def record(label, problem=None):
+    """Print one check result, like a test runner."""
+    RESULTS.append(problem is None)
+    status = "PASS" if problem is None else "FAIL"
+    print(f"  {status}  {label}" + (f": {problem}" if problem else ""))
+
+
+def validate(name, check):
     """Check one file and return the set of values it contains."""
+    print(name)
     seen = {}
+    formatting = []
     text = (ROOT / name).read_bytes().decode("utf-8")  # read_text hides CRs
     if text and not text.endswith("\n"):
-        errors.append(f"{name}: missing trailing newline")
+        formatting.append("missing trailing newline")
     for lineno, line in enumerate(text.split("\n"), start=1):
-        where = f"{name}:{lineno}"
         if line != line.rstrip():
-            errors.append(f"{where}: trailing whitespace or CRLF")
+            formatting.append(f"line {lineno} has trailing whitespace or CRLF")
         if not line or line.strip().startswith(("#", "=")):
             continue
         value = INLINE_COMMENT.sub(r"\1", line).strip()
+        label = f"line {lineno}: {value}"
         if value in seen:
-            errors.append(f"{where}: {value!r} duplicates line {seen[value]}")
-        elif problem := check(value):
-            errors.append(f"{where}: {value!r} {problem}")
+            record(label, f"duplicates line {seen[value]}")
+        else:
+            record(label, check(value))
         seen.setdefault(value, lineno)
+    record("formatting", "; ".join(formatting) or None)
     return set(seen)
 
 
 def main():
-    errors = []
-    if check_regex("(") is None:
-        errors.append("pihole-FTL did not reject an invalid regex")
+    print("pihole-FTL")
+    canary = check_regex("(")
+    record("rejects an invalid regex", None if canary else "accepted '('")
     for allow, block, check in LISTS:
-        overlap = validate(allow, check, errors) & validate(block, check, errors)
-        errors += [f"{v!r} is in both {allow} and {block}" for v in sorted(overlap)]
-    for error in errors:
-        print(f"error: {error}")
-    print(f"{len(errors)} error(s)")
-    return 1 if errors else 0
+        overlap = validate(allow, check) & validate(block, check)
+        print(f"{allow} vs {block}")
+        record("no entry in both", ", ".join(sorted(overlap)) or None)
+    failed = RESULTS.count(False)
+    print(f"\n{len(RESULTS) - failed} passed, {failed} failed")
+    return 1 if failed else 0
 
 
 if __name__ == "__main__":
