@@ -14,6 +14,8 @@ on:
     # Weekly on Monday at 8am Pacific (4pm UTC)
     - cron: "0 16 * * 1"
 
+permissions: {}
+
 jobs:
   verify-list-urls:
     runs-on: ubuntu-latest
@@ -21,7 +23,9 @@ jobs:
       contents: read
       actions: write
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
 
       - name: Verify allowlist & blocklist URLs
         run: |
@@ -54,6 +58,7 @@ jobs:
         if: always() && github.event_name == 'schedule'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
         run: |
           gh api --method PUT \
-            "/repos/${{ github.repository }}/actions/workflows/verify-list-reachability.yml/enable"
+            "/repos/${REPO}/actions/workflows/verify-list-reachability.yml/enable"
