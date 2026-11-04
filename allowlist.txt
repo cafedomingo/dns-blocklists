@@ -34,6 +34,12 @@ www.ow.ly
 amzn.to
 amzn.com
 
+## Target - HUMAN (PerimeterX) bot check; blocking these makes "Press & hold" loop
+collector-pxgwpp4wus.px-cloud.net
+collector-pxgwpp4wus.px-cdn.net
+collector-pxgwpp4wus.pxchk.net
+collector-pxgwpp4wus.px-client.net
+
 ## domain lists
 raw.githubusercontent.com
 
